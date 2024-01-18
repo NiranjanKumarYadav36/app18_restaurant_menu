@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1 class="display-4 text-center mb-5">Restaurant Menu</h1>
+  <ul class="list-group list-group-flush">
+    {% for meal in meals %}
+      <div class="mb-4">
+        <h2 class="display-5">{{ meal.1 }}</h2>
+        {% for row in item_list %}
+          {% if row.meal_type == meal.0 %}
+            <div class="card mb-3">
+              <div class="card-body">
+                <a href="{% url 'details' row.pk %}" class="text-decoration-none text-dark">
+                  <h3 class="card-title {% if row.status == 0 %}text-muted{% endif %}">
+                    {% if row.status == 0 %}<del>{% endif %}
+                    {{ row.meal }}
+                    {% if row.status == 0 %}</del>{% endif %}
+                  </h3>
+                </a>
+                <p class="card-text">{{ row.description }}</p>
+                <p class="card-text"><span class="badge bg-primary rounded-pill">{{ row.price }}</span></p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock content %}
