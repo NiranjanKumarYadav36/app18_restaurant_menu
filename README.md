@@ -9,7 +9,7 @@ Welcome to the Django Restaurant Menu project! This web application is designed 
 - Django
 
 ### Installation
-1. Clone the repository: `git clone https://github.com/your-username/django-restaurant-menu.git`
+1. Clone the repository: `git clone `https://github.com/NiranjanKumarYadav36/app18_restaurant_menu.git`
 2. Navigate to the project directory: `cd django-restaurant-menu`
 3. Install dependencies: `pip install -r requirements.txt`
 4. Apply migrations: `python manage.py migrate`
@@ -42,5 +42,3 @@ Welcome to the Django Restaurant Menu project! This web application is designed 
 4. Push to the branch: `git push origin feature-name`
 5. Submit a pull request.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

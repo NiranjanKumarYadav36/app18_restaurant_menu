@@ -17,7 +17,9 @@ class MenuList(generic.ListView):
     # context is a dictionary made up of key and value
     def get_context_data(self, **kwargs):
         # context = {'meals': ['Pizza', 'Pasta'],
-        #            'ingredients': ['things']}
+        #            'ingredient
+        #
+        #            s': ['things']}
         context = super().get_context_data(**kwargs)
         context['meals'] = MEAL_TYPE
         return context
